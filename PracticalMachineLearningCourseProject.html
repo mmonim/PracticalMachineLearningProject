@@ -65,7 +65,6 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <li><a href="#display-the-final-model">Display the final model</a></li>
 </ul></li>
 <li><a href="#predict-on-the-test-data">Predict on the test data</a><ul>
-<li><a href="#submission-to-coursera">Submission to Coursera</a></li>
 </ul></li>
 </ul>
 </div>
@@ -466,20 +465,6 @@ subset(DTest, select=names(DTest)[grep(&quot;belt|[^(fore)]arm|dumbbell|forearm&
 ## 18: 05/12/2011 11:24         no        361         18
 ## 19: 05/12/2011 14:23         no         72         19
 ## 20: 28/11/2011 14:14         no        255         20</code></pre>
-<div id="submission-to-coursera" class="section level2">
-<h2>Submission to Coursera</h2>
-<p>Write submission files to <code>predictionAssignment_files/answers</code>.</p>
-<pre class="r"><code>pml_write_files = function(x){
-  n = length(x)
-  path &lt;- &quot;predictionAssignment_files/answers&quot;
-  for(i in 1:n){
-    filename = paste0(&quot;problem_id_&quot;,i,&quot;.txt&quot;)
-    write.table(x[i],file=file.path(path, filename),quote=FALSE,row.names=FALSE,col.names=FALSE)
-  }
-}
-pml_write_files(hat)</code></pre>
-</div>
-</div>
 
 
 </div>
